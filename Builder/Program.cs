@@ -7,7 +7,16 @@ namespace Builder
     {
         static void Main(string[] args)
         {
-            var sandwich = new Sandwich(BreadType.Wheat, false, CheeseType.American, MeatType.Turkey, false, false, new List<string> { "Tomato" });
+            var sandwich = new Sandwich();
+
+            sandwich.BreadType = BreadType.Wheat;
+            sandwich.IsToasted = true;
+            sandwich.CheeseType = CheeseType.American;
+            sandwich.MeatType = MeatType.Turkey;
+            sandwich.HasMustard = true;
+            sandwich.HasMustard = true;
+            sandwich.Vegetables = new List<string> { "Tomato", "Lettuce" };
+
             sandwich.Display();
 
             Console.ReadKey();

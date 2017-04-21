@@ -27,44 +27,33 @@ namespace Builder
 
     class Sandwich
     {
-        private readonly BreadType breadType;
-        private readonly bool isToasted;
-        private readonly CheeseType cheeseType;
-        private readonly MeatType meatType;
-        private readonly bool hasMustard;
-        private readonly bool hasMayo;
-        private readonly List<string> vegetables;
+        public BreadType BreadType { get; set; }
 
-        public Sandwich(BreadType breadType,
-            bool isToasted,
-            CheeseType cheeseType,
-            MeatType meatType,
-            bool hasMustard,
-            bool hasMayo,
-            List<string> vegetables)
-        {
-            this.breadType = breadType;
-            this.isToasted = isToasted;
-            this.cheeseType = cheeseType;
-            this.meatType = meatType;
-            this.hasMustard = hasMustard;
-            this.hasMayo = hasMayo;
-            this.vegetables = vegetables;
-        }
+        public bool IsToasted { get; set; }
+
+        public CheeseType CheeseType { get; set; }
+
+        public MeatType MeatType { get; set; }
+
+        public bool HasMustard { get; set; }
+
+        public bool HasMayo { get; set; }
+
+        public List<string> Vegetables { get; set; }
 
         public void Display()
         {
-            Console.WriteLine($"Sandwich on {breadType} bread");
-            if (isToasted)
+            Console.WriteLine($"Sandwich on {BreadType} bread");
+            if (IsToasted)
                 Console.WriteLine("Toasted");
-            if (hasMayo)
+            if (HasMayo)
                 Console.WriteLine("With Mayo");
-            if (hasMustard)
+            if (HasMustard)
                 Console.WriteLine("With Mustard");
-            Console.WriteLine($"Meat: {meatType}");
-            Console.WriteLine($"Cheese: {cheeseType}");
+            Console.WriteLine($"Meat: {MeatType}");
+            Console.WriteLine($"Cheese: {CheeseType}");
             Console.WriteLine("Veggies: ");
-            vegetables.ForEach(x => Console.WriteLine($"     -{x}"));
+            Vegetables.ForEach(x => Console.WriteLine($"     -{x}"));
         }
     }
 }
