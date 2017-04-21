@@ -1,45 +1,30 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Builder
 {
-    class ClubSandwichBuilder
+    class ClubSandwichBuilder : SandwichBuilder
     {
-        Sandwich sandwich;
-
-        public Sandwich GetSandwich()
-        {
-            return sandwich;
-        }
-
-        public void CreateSandwich()
-        {
-            sandwich = new Sandwich();
-            PrepareBread();
-            ApplyMeatAndCheese();
-            ApplyVeggies();
-            AddCondiments();
-        }
-
-        private void AddCondiments()
+        public override void AddCondiments()
         {
             sandwich.HasMustard = true;
             sandwich.HasMustard = true;
         }
 
-        private void ApplyVeggies()
+        public override void ApplyVeggies()
         {
             sandwich.Vegetables = new List<string> { "Tomato", "Lettuce" };
         }
 
-        private void ApplyMeatAndCheese()
+        public override void ApplyMeatAndCheese()
         {
             sandwich.MeatType = MeatType.Turkey;
-            sandwich.BreadType = BreadType.Wheat;
+            sandwich.CheeseType = CheeseType.Cheddar;
         }
 
-        private void PrepareBread()
+        public override void PrepareBread()
         {
-            sandwich.BreadType = BreadType.Wheat;
+            sandwich.BreadType = BreadType.White;
             sandwich.IsToasted = true;
         }
     }

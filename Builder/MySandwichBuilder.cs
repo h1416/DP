@@ -3,42 +3,26 @@ using System.Collections.Generic;
 
 namespace Builder
 {
-    class MySandwichBuilder
+    class MySandwichBuilder : SandwichBuilder
     {
-        Sandwich sandwich;
-
-        public Sandwich GetSandwich()
-        {
-            return sandwich;
-        }
-
-        public void CreateSandwich()
-        {
-            sandwich = new Sandwich();
-            PrepareBread();
-            ApplyMeatAndCheese();
-            ApplyVeggies();
-            AddCondiments();
-        }
-
-        private void AddCondiments()
+        public override void AddCondiments()
         {
             sandwich.HasMustard = true;
             sandwich.HasMustard = true;
         }
 
-        private void ApplyVeggies()
+        public override void ApplyVeggies()
         {
-            sandwich.Vegetables = new List<string> { "Tomato", "Lettuce" };
+            sandwich.Vegetables = new List<string> { "Tomato", "Lettuce", "Onion" };
         }
 
-        private void ApplyMeatAndCheese()
+        public override void ApplyMeatAndCheese()
         {
-            sandwich.MeatType = MeatType.Turkey;
-            sandwich.BreadType = BreadType.Wheat;
+            sandwich.MeatType = MeatType.Ham;
+            sandwich.CheeseType = CheeseType.American;
         }
 
-        private void PrepareBread()
+        public override void PrepareBread()
         {
             sandwich.BreadType = BreadType.Wheat;
             sandwich.IsToasted = true;

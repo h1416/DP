@@ -6,10 +6,16 @@ namespace Builder
     {
         static void Main(string[] args)
         {
-            var sandwichBuilder = new MySandwichBuilder();
-            sandwichBuilder.CreateSandwich();
-            var sandwich = sandwichBuilder.GetSandwich();
-            sandwich.Display();
+            var sandwichMaker = new SandwichMaker(new MySandwichBuilder());
+            sandwichMaker.BuildSandwich();
+            sandwichMaker.GetSandwich().Display();
+
+            Console.WriteLine();
+
+            sandwichMaker = new SandwichMaker(new ClubSandwichBuilder());
+            sandwichMaker.BuildSandwich();
+            sandwichMaker.GetSandwich().Display();
+
             Console.ReadKey();
         }
     }
