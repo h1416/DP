@@ -1,0 +1,3 @@
+﻿"Decoupple an abstraction from its implementation so the two can vary independently." (GOF)
+
+Abstraction -> Abstraction -> Implementation
