@@ -4,6 +4,13 @@ namespace Bridge
 {
     class Book : IManuscript
     {
+        private IFormatter _formatter;
+
+        public Book(IFormatter formatter)
+        {
+            _formatter = formatter;
+        }
+
         public string Title { get; set; }
         public string Author { get; set; }
         public string Text { get; set; }
@@ -11,9 +18,9 @@ namespace Bridge
         public void Print()
         {
             Console.WriteLine("-Book");
-            Console.WriteLine($"Title: {Title}");
-            Console.WriteLine($"Author: {Author}");
-            Console.WriteLine($"Text: {Text}");
+            Console.WriteLine(_formatter.Format("Title", Title));
+            Console.WriteLine(_formatter.Format("Author", Author));
+            Console.WriteLine(_formatter.Format("Text", Text));
             Console.WriteLine();
         }
     }

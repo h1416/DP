@@ -5,23 +5,26 @@ namespace Bridge
 {
     class FAQ : IManuscript
     {
+        private IFormatter _formatter;
+
         public string Title { get; set; }
         public Dictionary<string, string> Questions { get; set; }
 
-        public FAQ()
+        public FAQ(IFormatter formatter)
         {
+            _formatter = formatter;
             Questions = new Dictionary<string, string>();
         }
 
         public void Print()
         {
             Console.WriteLine("-FAQ");
-            Console.WriteLine($"Title: {Title}");
+            Console.WriteLine(_formatter.Format("Title", Title));
 
             foreach (var q in Questions)
             {
-                Console.WriteLine($"Question: {q.Key}");
-                Console.WriteLine($"Answer: {q.Value}");
+                Console.WriteLine(_formatter.Format("Question", q.Key));
+                Console.WriteLine(_formatter.Format("Answer", q.Value));
             }
 
             Console.WriteLine();

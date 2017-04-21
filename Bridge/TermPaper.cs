@@ -4,6 +4,13 @@ namespace Bridge
 {
     class TermPaper : IManuscript
     {
+        private IFormatter _formatter;
+
+        public TermPaper(IFormatter formatter)
+        {
+            _formatter = formatter;
+        }
+
         public string Class { get; set; }
         public string Student { get; set; }
         public string Text { get; set; }
@@ -12,10 +19,10 @@ namespace Bridge
         public void Print()
         {
             Console.WriteLine("-TermPaper");
-            Console.WriteLine($"Class: {Class}");
-            Console.WriteLine($"Student: {Student}");
-            Console.WriteLine($"Text: {Text}");
-            Console.WriteLine($"References: {References}");
+            Console.WriteLine(_formatter.Format("Class", Class));
+            Console.WriteLine(_formatter.Format("Student", Student));
+            Console.WriteLine(_formatter.Format("Text",Text));
+            Console.WriteLine(_formatter.Format("References", References));
             Console.WriteLine();
         }    
     }
