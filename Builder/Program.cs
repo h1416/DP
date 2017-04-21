@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Builder
 {
@@ -7,18 +6,10 @@ namespace Builder
     {
         static void Main(string[] args)
         {
-            var sandwich = new Sandwich();
-
-            sandwich.BreadType = BreadType.Wheat;
-            sandwich.IsToasted = true;
-            sandwich.CheeseType = CheeseType.American;
-            sandwich.MeatType = MeatType.Turkey;
-            sandwich.HasMustard = true;
-            sandwich.HasMustard = true;
-            sandwich.Vegetables = new List<string> { "Tomato", "Lettuce" };
-
+            var sandwichBuilder = new MySandwichBuilder();
+            sandwichBuilder.CreateSandwich();
+            var sandwich = sandwichBuilder.GetSandwich();
             sandwich.Display();
-
             Console.ReadKey();
         }
     }
