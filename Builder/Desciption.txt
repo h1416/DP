@@ -1,0 +1,7 @@
+﻿The idea: separates the construction of a complex object from its representation
+ so that the same construction process can create different representations.
+
+It helps solving the following problems:
+	1. Too many parameters
+	2. Order dependent
+	3. Different construcstions
