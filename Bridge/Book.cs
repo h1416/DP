@@ -10,9 +10,9 @@ namespace Bridge
 
         public void Print()
         {
-            Console.WriteLine($"Title {Title}");
-            Console.WriteLine($"Author {Author}");
-            Console.WriteLine($"Text {Text}");
+            Console.WriteLine($"Title: {Title}");
+            Console.WriteLine($"Author: {Author}");
+            Console.WriteLine($"Text: {Text}");
             Console.WriteLine();
         }
     }
