@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="BackwardFormatter.cs" />
     <Compile Include="Book.cs" />
+    <Compile Include="FancyFormatter.cs" />
     <Compile Include="FAQ.cs" />
     <Compile Include="IFormatter.cs" />
     <Compile Include="IManuscript.cs" />

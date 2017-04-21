@@ -9,7 +9,8 @@ namespace Bridge
         {
             var documents = new List<IManuscript>();
             //var formatter = new StandardFormatter();
-            var formatter = new BackwardFormatter();
+            //var formatter = new BackwardFormatter();
+            var formatter = new FancyFormatter();
 
             var faq = new FAQ (formatter) { Title = "The Bridge Pattern FAQ" };
             faq.Questions.Add("What is it?", "A design pattern.");

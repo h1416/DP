@@ -1,3 +1,5 @@
 ﻿"Decoupple an abstraction from its implementation so the two can vary independently." (GOF)
 
-Abstraction -> Abstraction -> Implementation
+Abstraction -> Abstraction -> Implementation.
+
+In this example, IFormater acts like a bridge to decouple the IManuscript with its Implementation.
