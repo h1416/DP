@@ -2,7 +2,7 @@
 
 namespace Bridge
 {
-    class Book
+    class Book : IManuscript
     {
         public string Title { get; set; }
         public string Author { get; set; }

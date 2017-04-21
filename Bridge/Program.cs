@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Bridge
 {
@@ -6,10 +7,12 @@ namespace Bridge
     {
         static void Main(string[] args)
         {
+            var documents = new List<IManuscript>();
+
             var faq = new FAQ { Title = "The Bridge Pattern FAQ" };
             faq.Questions.Add("What is it?", "A design pattern.");
             faq.Questions.Add("When do we use it?", "When you need to separte an abstraction from an implementation.");
-            faq.Print();
+            documents.Add(faq);
 
             var book = new Book
             {
@@ -17,7 +20,7 @@ namespace Bridge
                 Author = "John Sonmez",
                 Text = "Blah blah blah..."
             };
-            book.Print();
+            documents.Add(book);
 
             var paper = new TermPaper
             {
@@ -26,7 +29,9 @@ namespace Bridge
                 Text = "Blah blah blah...",
                 References = "GOF"
             };
-            paper.Print();
+            documents.Add(paper);
+
+            documents.ForEach(doc => doc.Print());
 
             Console.ReadLine();
         }
