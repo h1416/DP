@@ -56,8 +56,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Class Diagram.PNG" />
     <Content Include="Description.txt" />
     <Content Include="UML.PNG" />
   </ItemGroup>
