@@ -1,4 +1,6 @@
-﻿namespace Bridge
+﻿using System;
+
+namespace Bridge
 {
     class Program
     {
@@ -25,6 +27,8 @@
                 References = "GOF"
             };
             paper.Print();
+
+            Console.ReadLine();
         }
     }
 }

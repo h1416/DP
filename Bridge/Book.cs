@@ -10,6 +10,7 @@ namespace Bridge
 
         public void Print()
         {
+            Console.WriteLine("-Book");
             Console.WriteLine($"Title: {Title}");
             Console.WriteLine($"Author: {Author}");
             Console.WriteLine($"Text: {Text}");

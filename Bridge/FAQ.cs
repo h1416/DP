@@ -15,6 +15,7 @@ namespace Bridge
 
         public void Print()
         {
+            Console.WriteLine("-FAQ");
             Console.WriteLine($"Title: {Title}");
 
             foreach (var q in Questions)
@@ -22,6 +23,8 @@ namespace Bridge
                 Console.WriteLine($"Question: {q.Key}");
                 Console.WriteLine($"Answer: {q.Value}");
             }
+
+            Console.WriteLine();
         }
     }
 }

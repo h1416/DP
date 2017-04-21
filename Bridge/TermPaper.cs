@@ -11,6 +11,7 @@ namespace Bridge
 
         public void Print()
         {
+            Console.WriteLine("-TermPaper");
             Console.WriteLine($"Class: {Class}");
             Console.WriteLine($"Student: {Student}");
             Console.WriteLine($"Text: {Text}");
