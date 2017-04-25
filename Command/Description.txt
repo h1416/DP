@@ -4,3 +4,10 @@
 	3. Enables delayed execution
 		a. Can queue commands for later execution
 		b. If command objects are also persitent, can delay across process restarts
+
+Also known aas: Action, Transaction
+
+Applicability:
+	1. Logging
+	2. Validation
+	3. Undo
