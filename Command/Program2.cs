@@ -28,7 +28,10 @@ namespace Command
         }
         public static IEnumerable<ICommandFactory> GetAvailableCommands()
         {
-            return new ICommand[] { new CreateOrderCommand(), new UpdateQuantityCommand(), new ShipOrderCommand()};
+            return new ICommandFactory[]
+                    {
+                        new CreateOrderCommand(), new UpdateQuantityCommand(), new ShipOrderCommand()
+                    };
         }
 
 

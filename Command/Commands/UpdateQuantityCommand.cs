@@ -2,7 +2,7 @@
 
 namespace Command.Commands
 {
-    class UpdateQuantityCommand : ICommand
+    class UpdateQuantityCommand : ICommand, ICommandFactory
     {
         public int NewQuantity { get; set; }
         public void Execute()
@@ -13,6 +13,15 @@ namespace Command.Commands
 
             // simulate logging
             Console.WriteLine($"LOG: Updated order quantity from {oldQuantity} to {NewQuantity}");
+        }
+
+        public string CommandName { get { return "UpdateQuantity"; } }
+
+        public string Desciption { get { return "UpdateQuantity number"; } }
+
+        public ICommand MakeCommand(string[] arguments)
+        {
+            return new UpdateQuantityCommand { NewQuantity = int.Parse(arguments[1]) };
         }
     }
 }
