@@ -1,0 +1,6 @@
+﻿The Intent:
+	1. Represent an action as an object
+	2. Decouple clients that execute the command from the details and dependencies of the command logic
+	3. Enables delayed execution
+		a. Can queue commands for later execution
+		b. If command objects are also persitent, can delay across process restarts
