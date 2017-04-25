@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Command
+namespace Command.Commands
 {
     class CreateOrderCommand : ICommand
     {
