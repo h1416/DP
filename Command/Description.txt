@@ -11,3 +11,9 @@ Applicability:
 	1. Logging
 	2. Validation
 	3. Undo
+
+Consequences
+	1. Commands must be completely self contained
+		The client doesn't pass in any arguments
+	2. Easy to add new commands
+		Just add a new class (open/closed principal)
