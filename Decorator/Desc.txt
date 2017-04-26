@@ -1,0 +1,5 @@
+﻿Intent:
+	1. Add functionality to existing objects dynamically
+	2. Alternative to sub classing
+	3. Flexible design
+	4. Support Open Closed Principle
