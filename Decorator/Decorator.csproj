@@ -50,6 +50,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DecoratorClassUML.PNG" />
     <Content Include="Desc.txt" />
   </ItemGroup>
   <ItemGroup>

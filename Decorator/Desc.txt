@@ -3,3 +3,8 @@
 	2. Alternative to sub classing
 	3. Flexible design
 	4. Support Open Closed Principle
+
+Applicability
+	1. Legacy Systems
+	2. Add functionality to controls
+	3. Sealed classes
