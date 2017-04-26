@@ -47,6 +47,10 @@
     <Compile Include="ConcreteComponents\LargePizza.cs" />
     <Compile Include="ConcreteComponents\MediumPizza.cs" />
     <Compile Include="ConcreteComponents\SmallPizza.cs" />
+    <Compile Include="ConcreteDecorators\Cheese.cs" />
+    <Compile Include="ConcreteDecorators\Ham.cs" />
+    <Compile Include="ConcreteDecorators\Pepper.cs" />
+    <Compile Include="Decorator\PizzaDecorator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -59,10 +63,7 @@
     <Content Include="DecoratorVisualized.PNG" />
     <Content Include="Desc.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ConcreteDecorators\" />
-    <Folder Include="Decorator\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

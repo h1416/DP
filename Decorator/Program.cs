@@ -1,4 +1,6 @@
-﻿using Decorator.ConcreteComponents;
+﻿using Decorator.Component;
+using Decorator.ConcreteComponents;
+using Decorator.ConcreteDecorators;
 using System;
 
 namespace Decorator
@@ -7,12 +9,30 @@ namespace Decorator
     {
         static void Main(string[] args)
         {
-            var largePizza = new LargePizza();
+            //Plain large pizza
+            Pizza largePizza = new LargePizza();
+            Display(largePizza);
 
-            Console.WriteLine(largePizza.GetDescription());
-            Console.WriteLine("{0:C2}", largePizza.CalculateCost());
+            // Add cheese
+            largePizza = new Cheese(largePizza);
+            Display(largePizza);
+
+            // Add Ham
+            largePizza = new Ham(largePizza);
+            Display(largePizza);
+
+            // Add pepper
+            largePizza = new Pepper(largePizza);
+            Display(largePizza);
 
             Console.ReadKey();
+        }
+
+        static void Display(Pizza pizza)
+        {
+            Console.WriteLine(pizza.GetDescription());
+            Console.WriteLine("{0:C2}", pizza.CalculateCost());
+            Console.WriteLine();
         }
     }
 }

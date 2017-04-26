@@ -11,3 +11,18 @@ Applicability
 
 How Does It Work:
 	1. It wraps objects
+
+Consequences:
+	1. The orginal object is unaware of any decoractions
+	2. The orginal object is not modified/unchanged
+	3. There is no one big feature-laden class with all the options in it
+	4. The decorations can be composed together in a mix-and-match fashion
+	5. However, can increase the complexity of code
+
+Related Patterns:
+	1. Adapter
+	2. Bridge
+	3. Composite
+	4. Facade
+	5. Flyweight
+	6. Proxy
