@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Decorator.ConcreteComponents;
+using System;
 
 namespace Decorator
 {
@@ -10,6 +7,12 @@ namespace Decorator
     {
         static void Main(string[] args)
         {
+            var largePizza = new LargePizza();
+
+            Console.WriteLine(largePizza.GetDescription());
+            Console.WriteLine("{0:C2}", largePizza.CalculateCost());
+
+            Console.ReadKey();
         }
     }
 }
